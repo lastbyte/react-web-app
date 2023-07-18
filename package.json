@@ -60,7 +60,8 @@
     "build:dev": "webpack --config webpack/dev.js",
     "build:qa": "webpack --config webpack/qa.js",
     "build:uat": "webpack --config webpack/uat.js",
-    "build:prod": "webpack --config webpack/prod.js"
+    "build:prod": "webpack --config webpack/prod.js",
+    "build": "webpack --config webpack/prod.js"
   },
   "eslintConfig": {
     "extends": [
