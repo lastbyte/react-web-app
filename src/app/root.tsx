@@ -3,8 +3,10 @@ import AppRouter from "./common/appRouter";
 
 function App() {
     return (
-        <AppRouter>
-        </AppRouter>
+        <div className="app-wrapper">
+            <AppRouter>
+            </AppRouter>
+        </div>
     );
 }
 
