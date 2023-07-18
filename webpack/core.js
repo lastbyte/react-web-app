@@ -1,12 +1,9 @@
-const HtmlWebPackPlugin = require('./html-webpack-plugin-config');
 const HtmlWebPackHarddiskPlugin = require('./html-webpack-harddisk-plugin-config');
 const path = require("path");
 const CopyPlugin = require("./copy-webpack-plugin-config");
-const ServiceWorker = require("./service-worker");
 module.exports = {
     entry: {
         app: path.resolve(__dirname, '../src/index.tsx'),
-        worker: path.resolve(__dirname, '../src/service-worker/worker.ts')
     },
     module: {
         rules: [
