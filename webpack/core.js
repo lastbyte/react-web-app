@@ -1,6 +1,8 @@
-const HtmlWebPackHarddiskPlugin = require('./html-webpack-harddisk-plugin-config');
+const HtmlWebPackHarddiskPlugin = require('./plugins/html-webpack-harddisk-plugin-config');
 const path = require("path");
-const CopyPlugin = require("./copy-webpack-plugin-config");
+const CopyPlugin = require("./plugins/copy-webpack-plugin-config");
+const HtmlWebpackPluginConfig = require("./plugins/html-webpack-plugin-config");
+
 module.exports = {
     entry: {
         app: path.resolve(__dirname, '../src/index.tsx'),
@@ -23,10 +25,21 @@ module.exports = {
     },
     plugins: [
         HtmlWebPackHarddiskPlugin,
+        HtmlWebpackPluginConfig,
         CopyPlugin,
     ],
     resolve: {
-        extensions: ['.js', '.ts', '.jsx', '.tsx']
+        extensions: ['.js', '.ts', '.jsx', '.tsx'],
+        alias: {
+            "@src": path.resolve(__dirname, "../src"),
+            "@app": path.resolve(__dirname, "../src/app"),
+            "@assets": path.resolve(__dirname, "../src/app/assets"),
+            "@clients": path.resolve(__dirname, "../src/app/clients"),
+            "@common": path.resolve(__dirname, "../src/app/common"),
+            "@components": path.resolve(__dirname, "../src/app/components"),
+            "@pages": path.resolve(__dirname, "../src/app/pages"),
+            "@redux": path.resolve(__dirname, "../src/app/redux"),
+        }
     },
     output: {
         path: path.resolve(__dirname, '../public'),

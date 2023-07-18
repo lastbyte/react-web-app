@@ -1,4 +1,4 @@
-import clientInstance from "./clientInstance";
+import clientInstance from "@clients/clientInstance";
 
 const apiClient = clientInstance()
 export const getPostById = async (id: number) => {

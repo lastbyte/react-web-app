@@ -1,10 +1,8 @@
 const webpackMerge = require('webpack-merge');
 const coreConfig = require('./core');
-const path = require("path");
-const ServiceWorker = require("./service-worker");
-const HtmlWebpackPluginConfig = require("./html-webpack-plugin-config");
+const ServiceWorker = require("./plugins/service-worker");
 
 module.exports = webpackMerge.merge(coreConfig, {
     mode: "production",
-    plugins: [HtmlWebpackPluginConfig, ServiceWorker],
+    plugins: [ServiceWorker],
 });

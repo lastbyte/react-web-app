@@ -1,6 +1,6 @@
 import React from "react";
-import './styles/home.css';
-import logo from '../../assets/images/logo.svg';
+import '@pages/styles/home.css';
+import {Link} from "react-router-dom";
 
 interface HomeProps {
 
@@ -10,7 +10,7 @@ const Home: React.FC<HomeProps> = (props: HomeProps) => {
     return <>
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
+                <Link to="counter" className="App-link">Counter App Example</Link>
                 <p>
                     Edit <code>src/app/pages/home.tsx</code> and save to reload.
                 </p>
