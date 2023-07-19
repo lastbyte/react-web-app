@@ -24,12 +24,21 @@
     box-sizing: border-box;
 }
 
-.display span {
+
+.display_step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.display span, .display_step span {
     font-size: 2rem;
 }
 
 .up, .down {
     all: unset;
+    cursor: pointer;
     padding: 10px 20px;
     font-size: 1.25rem;
     font-weight: 500;
