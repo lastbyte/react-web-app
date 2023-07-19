@@ -5,7 +5,6 @@ const {pathsToModuleNameMapper} = require('ts-jest');
 const {compilerOptions} = require('./tsconfig');
 
 aliases = pathsToModuleNameMapper(compilerOptions.paths, {prefix: "<rootDir>/"});
-console.log(aliases)
 
 module.exports = {
     preset: "ts-jest",

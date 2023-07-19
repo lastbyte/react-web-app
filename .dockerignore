@@ -1,5 +1,9 @@
-*-lock.json
-yarn.lock
+.idea/
+.run/
 .git/
 .gitignore
-.idea/
+coverage/
+node_modules
+public/
+*-lock.json
+yarn.lock
