@@ -1,6 +1,7 @@
 const webpackMerge = require('webpack-merge');
 const coreConfig = require('./core');
 const path = require("path");
+const HtmlWebpackPluginConfig = require("./plugins/html-webpack-plugin-config.dev");
 
 module.exports = webpackMerge.merge(coreConfig, {
     mode: "development",
@@ -12,4 +13,5 @@ module.exports = webpackMerge.merge(coreConfig, {
         hot: true,
         historyApiFallback: true,
     },
+    plugins: [HtmlWebpackPluginConfig]
 });
