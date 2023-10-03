@@ -1,6 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit'
-import counterReducer from '@redux/reducers/countReducer'
+import themeReducer from "@redux/reducers/themeReducer";
+import codeSnipperReducer from "@redux/reducers/codeSnipperReducer";
 
 export default configureStore({
-    reducer: {counter: counterReducer},
+    reducer: {theme: themeReducer, codeSnippet : codeSnipperReducer},
 })
